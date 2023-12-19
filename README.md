@@ -2,7 +2,7 @@
 Après avoir téléchargé et compilé le projet,
 mettez les fichiers qui sont au format:
 
-C​ - 3 - 4\n
+C​ - 3 - 4
 M​ - 1 - 0
 M​ - 2 - 1
 T​ - 0 - 3
