@@ -1,0 +1,5 @@
+C - 4 - 4
+M - 1 - 2
+M - 2 - 2
+T - 1 - 1 - 1
+A - Laurent - 2 - 1 - O - AGGDAAD
