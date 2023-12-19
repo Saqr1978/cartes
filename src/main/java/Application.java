@@ -1,20 +1,25 @@
 package main.java;
 
-import java.util.Scanner;
+import java.io.File;
 
 import main.java.services.CarteService;
 import main.java.view.ConsolePrint;
 
 public class Application {
-  
+
   public static void main(String[] args) {
     String directory = "../../cartes/";
     ConsolePrint consolePrint = new ConsolePrint(new CarteService());
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Entrez le nom du fichier de test (dans le dossier \"cartes\") à lire:");
-    String nomFichier = sc.nextLine();
-    consolePrint.fichierDepart(directory, nomFichier);
-    System.out.println("Après exécution des mouvements, voici le résultat:\n");
-    consolePrint.carteResultat(directory, nomFichier);
+
+    File[] fichiersTest = new File(directory).listFiles();
+    for (File fichier : fichiersTest) {
+      String nomFichier = fichier.getName();
+      System.out.println("----------------------------------------------------\n"
+      + "---   Fichier au nom: " + nomFichier + "\n"
+      + "----------------------------------------------------\n");
+      consolePrint.fichierDepart(directory, nomFichier);
+      System.out.println("Après exécution des mouvements, voici le résultat:\n");
+      consolePrint.carteResultat(directory, nomFichier);
+    }
   }
 }
